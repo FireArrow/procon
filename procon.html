@@ -1,0 +1,26 @@
+<head>
+  <title>procon</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> loginButtons}}
+  
+  {{#if currentUser}}
+
+    {{> postProject}}
+
+    <div class="projects">
+      <ul class="projects">
+        {{#each projects}}
+          {{> project}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <form class="new-competence">
+      <input type="text" name="text" placeholder="Type new competence" />
+    </form>
+  {{/if}}
+</body>

@@ -1,0 +1,26 @@
+<template name="postProject">
+  <div class="new_project">
+    <h1>Post project</h1>
+    <form class="new-project">
+      <input type="text" name="name" placeholder="Name"/>
+      <input type="text" name="description" placeholder="Description"/>
+      <input type="text" name="tags" placeholder="tags, comma separated"/>
+      <button class="post">Post project</button>
+    </form>
+  </div>
+</template>
+
+<template name="project">
+  <li class="{{#if checked}}checked{{/if}}">
+    <button class="delete">&times;</button>
+    <h2>{{name}}</h2>
+    <span class="text">{{description}}</span>
+    <div class="owner">{{owner}}</div>
+    <div class="tag">{{tags}}</div>
+<!--    <div class="date">{{createdAt}}</div> -->
+  </li>
+</template>
+
+<template name="filter">
+  <input type="text" name="filter" placeholder="Filter, comma separated" />
+</template>
